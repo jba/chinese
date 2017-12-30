@@ -1,0 +1,38 @@
+# look here		kàn zhèli	看这里
+# open your book		bǎ shū dǎkāi	把书打开
+# come to the front	dào qiánmiàn lái	到前面来
+# return to your seat, please	qǐng huí zuòwèi	请回座位
+# sit properly please	qǐng zuò hǎo	请坐好
+# please raise your hand	qǐng jǔ shoǔ	请举手
+# put down your hand	bǎ shǒu fàngxià	把手放下
+# a little louder		dà shēng diǎnr	大声点儿
+# say it again		zài shuō yí cì	再说一次
+# very good		hěn hǎo	很好
+# extremely good		fēicháng hǎo	非常好
+# Are you busy?		Nǐ máng ma?	你忙吗？
+# Where are you going?	Shàng nǎr qù?	上哪儿去？
+# How is everything?	Zěnmeyàng?	怎么样？
+# Have you eaten?		Chīfàn le ma?	吃饭了吗？
+# Goodbye, teacher	lǎoshī zàijiàn.	老师再见
+# Hello, fellow classmates.	tóngxuémen hǎo	同学们好
+# I am Lanlan.		wǒ shì Lánlán.	我是兰兰。
+
+:poss :n.1 is :prep :n.2	:poss :n.1 zài :n.2 :prep	XXX
+There is :n.1 :prep :n.2	:n.2 :prep yǒu :n.1 		XXX
+:poss :n is :iprep  		:poss :n zài :iprep		XXX
+
+
+# Your cell phone is in front of the computer.	nǐde shǒujī zài diànnǎo qiánmiàn.	你的手机在电脑前面。
+# There are ice creams in the refrigerator.	diànbīngxiāng lǐmiàn yǒu bīngqílín.	电冰箱里面有冰淇淋。
+
+# My house has multi-stories	wǒjiā shì lóufáng	我家是楼房
+# There are 4 bedrooms & 3 baths.	yǒu sì jiān wòshì hé sān jiān yùshì.	有四间卧室和三间浴室。
+# My dog loves to sleep on the sofa.	wǒde gǒu xǐhuān zài shāfā shàngmiàn shuìjiào.	我的狗喜欢在沙发上面睡觉。
+# Where do you watch TV?		nǐ zài nǎr kàndiànshì?	你在哪儿看电视？
+# Behind our living room is the dining room.	wǒjiā de kètīng hòumiàn shì fàntīng.	我家的客厅后面是饭厅。
+# #Our washing machine is upstairs。	wǒmen de xǐyījī zài lóu shàng.	我们的洗衣机在楼上。
+# Excuse me, where is the bathroom(toilet)?	qǐngwèn, cèsuǒ zài nǎr?	请问，厕所在哪儿？
+# The dining room is facing the kitchen.	fàntīng zài chúfáng duìmiàn.	饭厅在厨房对面。
+# I do my homework in my bedroom.	wǒ zài wǒde wòshì zuò gōngkè.	我在我的卧室做功课。
+# There are 2 bathrooms downstairs.	lóuxià yǒu liǎngjiān yùshì.	楼下有两间浴室。
+# Is your car in the garage?	nǐde chē zài chēkù ma?	你的车在车库吗？

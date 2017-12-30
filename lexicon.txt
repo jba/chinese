@@ -1,0 +1,38 @@
+your		nǐde		poss
+car		chē		n
+garage		chēkù		loc
+book		shū		n
+you		nǐ		p
+teacher		lǎoshī		n
+I		wǒ		p
+we		wǒmen		p
+My		wǒde		poss
+our		wǒmen de	poss
+father		baba		rel
+mother		mama		rel
+cellphone	shǒujī		n
+computer	diànnǎo		n
+refrigerator	diànbīngxiāng	n
+ice cream	bīngqílín	n
+in front of	qiánmiàn	prep
+inside		lǐmiàn		prep
+bedroom		wòshì		loc
+4		sì		num
+3		sān		num
+bathroom	yùshì		loc
+dog		gǒu		n
+sofa		shāfā		n
+on		shàngmiàn	prep
+sleep		shuìjiào	v
+where		nǎr		q
+look/watch	kàn		v
+TV		diànshì		n
+family/house	wǒjiā		n
+our family's	wǒjiā de	poss
+living room	kètīng		loc
+behind 		hòumiàn		prep
+dining room	fàntīng		loc
+upstairs	lóushàng	iprep
+downstairs	lóuxià		iprep
+washing machine	xǐyījī		n
+facing		duìmiàn		prep
