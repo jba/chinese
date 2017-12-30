@@ -1,0 +1,10 @@
+My ideal house is white and it's not very big	wǒ lǐxiǎngde fángzi shì báisède, bù hěndà.	我理想的房子是白色的，不很大。
+:prep the :room1 is the :room2 .		:room1 :prep shì :room2 .	:room1 :prep 是 :room2 。
+My :room is on :num floor，the first one to the :lr .	wǒde :room zài :num lóu :lr dìyījiān.	我的 :room 在 :num 楼 :lr 第一间。
+I can :v in the :room .			wǒ kěyǐ zài :room :v .			我可以在 :room :v 。
+My car is white.			wǒ de chē shì báisède.			我的车是白色的。
+I can invite friends over to swim.	wǒ kěyǐ qǐng péngyǒu lái yóuyǒng.	我可以请朋友来游泳。
+:pn like bunk beds.			:pn xǐhuān shàngxià chuáng.		:pn 喜欢上下床。
+There's a small :n in our :room		wǒmen de :room yǒu yíge xiǎo :n .	我们的 :room 有一个小 :n 。
+I can :v on the :room .			wǒ kěyǐ zài :room :v .			我可以在 :room :v 。
+There are 2 :room , one upstair and one downstairs.	yǒu liǎng jiān :room , yìjiān zài lóuxià, háiyǒu yìjiān zài lóushàng.	有两间 :room ，一间在楼下，还有一间在楼上

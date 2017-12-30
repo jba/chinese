@@ -8,6 +8,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 var (
@@ -41,6 +42,7 @@ type Entry struct {
 
 func main() {
 	flag.Parse()
+	rand.Seed(time.Now().UnixNano())
 	if *itemFile == "" {
 		log.Fatal("need -i")
 	}
@@ -97,9 +99,13 @@ func readLexicon(filename string) (map[string][]*Word, error) {
 }
 
 func buildEntries(items []*Item, n int) []*Entry {
+	perm := rand.Perm(len(items))
 	var result []*Entry
+	if len(items) < n {
+		n = len(items)
+	}
 	for i := 0; i < n; i++ {
-		item := items[rand.Intn(len(items))]
+		item := items[perm[i]]
 		result = append(result, entry(item))
 	}
 	return result
@@ -113,7 +119,11 @@ func runFlashcards(entries []*Entry) {
 
 	for len(unfinished) > 0 {
 		fmt.Printf("%d items to study.\n", len(unfinished))
-		for entry := range unfinished {
+		var es []*Entry
+		for e := range unfinished {
+			es = append(es, e)
+		}
+		for _, entry := range es {
 			if present("", entry) {
 				delete(unfinished, entry)
 			}
