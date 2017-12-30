@@ -1,38 +1,145 @@
-your		nǐde		poss
-car		chē		n
-garage		chēkù		loc
-book		shū		n
-you		nǐ		p
-teacher		lǎoshī		n
-I		wǒ		p
-we		wǒmen		p
-My		wǒde		poss
-our		wǒmen de	poss
-father		baba		rel
-mother		mama		rel
-cellphone	shǒujī		n
-computer	diànnǎo		n
-refrigerator	diànbīngxiāng	n
-ice cream	bīngqílín	n
-in front of	qiánmiàn	prep
-inside		lǐmiàn		prep
-bedroom		wòshì		loc
-4		sì		num
-3		sān		num
-bathroom	yùshì		loc
-dog		gǒu		n
-sofa		shāfā		n
-on		shàngmiàn	prep
-sleep		shuìjiào	v
-where		nǎr		q
-look/watch	kàn		v
-TV		diànshì		n
-family/house	wǒjiā		n
-our family's	wǒjiā de	poss
-living room	kètīng		loc
-behind 		hòumiàn		prep
-dining room	fàntīng		loc
-upstairs	lóushàng	iprep
-downstairs	lóuxià		iprep
-washing machine	xǐyījī		n
-facing		duìmiàn		prep
+your		nǐde		poss	XXX
+my		wǒde		poss	我的
+our		wǒmen de	poss	XXX
+my father's	wǒ baba de	poss	XXX
+my mother's	wǒ mama de	poss	我妈妈的
+our family's	wǒjiā de	poss	XXX
+
+I		wǒ		pn	XXX
+we		wǒmen		pn	XXX
+you		nǐ		pn	XXX
+
+2		liǎng		num	XXX
+3		sān		num	XXX
+4		sì		num	XXX
+
+bathroom	yùshì		n	XXX
+bedroom		wòshì		n	卧室
+book		shū		n	XXX
+car		chē		n	XXX
+cellphone	shǒujī		n	XXX
+computer	diànnǎo		n	XXX
+dog		gǒu		n	XXX
+family/house	wǒjiā		n	XXX
+garage		chēkù		n	车库
+ice cream	bīngqílín	n	XXX
+kitchen		chúfáng		n	XXX
+living room	kètīng		n	XXX
+refrigerator	diànbīngxiāng	n	XXX
+sofa		shāfā		n	XXX
+teacher		lǎoshī		n	XXX
+toilet		cèsuǒ		n	厕所
+TV		diànshì		n	XXX
+washing machine	xǐyījī		n	XXX
+school		xuéxiào		n	XXX
+book bag	shūbāo		n	XXX
+house		wǒjiā		n	XXX
+laundry		xǐyīfáng	n	洗衣房
+study		shūfáng		n	书房
+dining room	fàntīng		n	饭厅
+baseball	Bàngqiú		n	XXX
+basketball	lánqiú		n	XXX
+tennis		wǎngqiú		n	XXX
+soccer		zúqiú		n	XXX
+volleyball	páiqiú		n	XXX
+ping pong	pīngpāngqiú	n	XXX
+bowling		bǎolíngqiú	n	XXX
+golf		gāoěrfūqiú	n	XXX
+badminton	yǔmáoqiú	n	XXX
+football	gǎnlǎnqiú	n	XXX
+eye		yǎn jīng	n	XXX
+eyebrow		méi máo		n	XXX
+mouth		zuǐbā		n	XXX
+nose		bízi		n	XXX
+chin		xiàbā		n	XXX
+mustache	húxū		n	XXX
+ear		ěrduo		n	XXX
+hair		tóufa		n	XXX
+teeth		yá chǐ		n	XXX
+heart		xīnzàng		n	XXX
+
+
+father		baba		rel	XXX
+mother		mama		rel	XXX
+
+look/watch	kàn		v	XXX
+sleep		shuìjiào	v	XXX
+
+where		nǎr		q	XXX
+
+upstairs	lóushàng	iprep	XXX
+downstairs	lóuxià		iprep	XXX
+
+behind 		hòumiàn		prep	XXX
+facing		duìmiàn		prep	XXX
+in front of	qiánmiàn	prep	XXX
+inside		lǐmiàn		prep	XXX
+on (top of)	shàngmiàn	prep	XXX
+under		xiàmiàn		prep	XXX
+left of		zuǒbiān		prep	XXX
+right of	yòubiān		prep	XXX
+in the middle of		zhōngjiān	prep	XXX
+
+year		nián		dur		XXX
+today		jīntiān		tm		今天
+tomorrow	míngtiān	tm		明天
+yesterday	zuótiān		tm		昨天
+the day before yesterday	qiántiān	tm	前天
+the year after next year	hòunián		tm	后年
+
+
+birthday	shēngrì		n		生日
+birthday cake	shēngrì dàngāo	n		生日蛋糕
+birthday party	shēngrì huì	n		生日会
+
+Sunday		xīngqītiān	dow	星期天
+
+
+early morning	zǎoshàng	:tod	早上
+noon		zhōngwǔ		:tod	中午
+afternoon	xiàwǔ		:tod	下午
+morning		shàngwǔ		:tod	上午
+6 o'clock	liùdiǎn		:tod	六点
+7:30 AM		zǎoshàng qīdiǎnbàn	:tod	早上七点半
+8:15 PM		wǎnshàng bādiǎn shíwǔfēn	:tod	晚上八点十五分
+9:04 AM		shàngwǔ jiǔdiǎn língsì fēn	:tod	上午九点0四分
+12:40 PM	zhōngwǔ shíèrdiǎn sìshífēn	:tod	中午十二点四十分
+2:58 PM		xiàwǔ liǎngdiǎn wǔshíbāfēn	:tod	下午两点五十八分
+1:20AM		wǎnshàng yīdiǎn èrshífēn	:tod	晚上一点二十分
+this morning	jīntiān zǎoshàng		:tod	今天早上
+breakfast	zǎofàn	:meal		早饭
+lunch		wǔfàn	:meal	午饭
+dinner		wǎnfàn	:meal		晚饭
+last night	zuótiān wǎnshàng	:tod	昨天晚上
+
+sing		chànggē	v	唱歌
+dance		tiàowǔ	v	跳舞
+drink tea	hēchá	v	喝茶
+eat		chī	v	吃
+listen to music	tīng yīnyuè	听音乐
+play chess	xiàqí		下棋
+write		xiězì	v	写字
+read		kànshū	v	看书
+make phone calls	dǎ diànhuà	v	打电话
+
+
+get up	qǐchuáng
+起床
+eat breakfast	chī zǎofàn
+吃早饭
+go to school	shàngxué
+上学
+eat lunch	chī wǔfàn
+吃午饭
+do homework	zuò gōngkè
+做功课
+watch TV	kàn diànshì
+看电视
+watch movies	kàn diànyǐng
+看电影
+When do you do your homework?	nǐ jǐdiǎn zuògōngkè?
+你几点做功课？
+Can you play chess?	(nǐ huìbúhuì xiàqí)?
+你会不会下棋？
+Do you like to watch movies?	(nǐ xǐbùxǐhuān kàn diàn yǐng)?
+你喜不喜欢看电影？

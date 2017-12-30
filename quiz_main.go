@@ -13,6 +13,8 @@ import (
 var (
 	itemFile    = flag.String("i", "items.txt", "file of items")
 	lexiconFile = flag.String("l", "lexicon.txt", "file of words")
+	nItems      = flag.Int("n", 10, "number of items to study/quiz")
+	quiz        = flag.Bool("q", false, "quiz mode")
 )
 
 var (
@@ -33,6 +35,10 @@ type Word struct {
 	PartOfSpeech string
 }
 
+type Entry struct {
+	Question, Answer string
+}
+
 func main() {
 	flag.Parse()
 	if *itemFile == "" {
@@ -48,7 +54,12 @@ func main() {
 	}
 	input = bufio.NewReader(os.Stdin)
 
-	quiz(items)
+	qi := buildEntries(items, *nItems)
+	if *quiz {
+		runQuiz(qi)
+	} else {
+		runFlashcards(qi)
+	}
 }
 
 func readDataFile(filename string) ([]*Item, error) {
@@ -68,7 +79,7 @@ func readDataFile(filename string) ([]*Item, error) {
 }
 
 func readLexicon(filename string) (map[string][]*Word, error) {
-	lines, err := readTSVFile(filename, 3)
+	lines, err := readTSVFile(filename, 4)
 	if err != nil {
 		return nil, err
 	}
@@ -78,40 +89,70 @@ func readLexicon(filename string) (map[string][]*Word, error) {
 			English:      line[0],
 			Pinyin:       line[1],
 			PartOfSpeech: line[2],
+			Characters:   line[3],
 		}
 		lex[word.PartOfSpeech] = append(lex[word.PartOfSpeech], word)
 	}
 	return lex, nil
 }
 
-func quiz(items []*Item) {
-	unfinished := map[*Item]bool{}
-	for _, i := range items {
+func buildEntries(items []*Item, n int) []*Entry {
+	var result []*Entry
+	for i := 0; i < n; i++ {
+		item := items[rand.Intn(len(items))]
+		result = append(result, entry(item))
+	}
+	return result
+}
+
+func runFlashcards(entries []*Entry) {
+	unfinished := map[*Entry]bool{}
+	for _, i := range entries {
 		unfinished[i] = true
 	}
 
 	for len(unfinished) > 0 {
 		fmt.Printf("%d items to study.\n", len(unfinished))
-		for item := range unfinished {
-			question, answer := qa(item)
-			fmt.Printf("%-30s ", question)
-			input.ReadString('\n')
-			fmt.Printf("%-30s ", answer)
-			if yorn("y/n? ") {
-				delete(unfinished, item)
+		for entry := range unfinished {
+			if present("", entry) {
+				delete(unfinished, entry)
 			}
 		}
 		fmt.Println()
 	}
 }
 
-func qa(item *Item) (q, a string) {
+func present(prefix string, e *Entry) bool {
+	fmt.Printf("%s%-30s ", prefix, e.Question)
+	input.ReadString('\n')
+	fmt.Printf("%-30s ", e.Answer)
+	return yorn("y/n? ")
+}
+
+func runQuiz(entries []*Entry) {
+	fmt.Printf("A quiz with %d questions. Let's begin!\n", len(entries))
+	for {
+		perm := rand.Perm(len(entries))
+		score := 0
+		for i, pi := range perm {
+			if present(fmt.Sprintf("%d: ", i+1), entries[pi]) {
+				score++
+			}
+		}
+		fmt.Printf("You got %d out of %d, which is %d%%.\n", score, len(entries), score*100/len(entries))
+		if !yorn("Take it again? ") {
+			break
+		}
+	}
+}
+
+func entry(item *Item) *Entry {
 	if !isTemplate(item.English) {
-		return item.English, item.Pinyin
+		return &Entry{item.English, item.Pinyin}
 	}
 	q, bindings := instantiateTemplate(item.English, lexicon)
-	a = applyBindings(item.Pinyin, bindings)
-	return q, a
+	a := applyBindings(item.Pinyin, bindings)
+	return &Entry{q, a}
 }
 
 func isTemplate(s string) bool {
@@ -138,12 +179,9 @@ func chooseWord(w string, lexicon map[string][]*Word, bindings map[string]string
 		return w
 	}
 	v := w[1:]
-	i := strings.IndexRune(v, '.')
-	var pos string
-	if i == -1 {
-		pos = v
-	} else {
-		pos = v[:i]
+	pos := v
+	if last := v[len(v)-1]; last >= '0' && last <= '9' {
+		pos = v[:len(v)-1]
 	}
 	choices := lexicon[pos]
 	if len(choices) == 0 {
@@ -168,7 +206,7 @@ func applyBindings(s string, bindings map[string]string) string {
 			}
 			result = append(result, b)
 		} else {
-			log.Fatalf("no binding for %q", w[1:])
+			log.Fatalf("applyBindings(%q): no binding for %q", s, w[1:])
 		}
 	}
 	return strings.Join(result, " ")
@@ -218,6 +256,9 @@ func readTSVFile(filename string, itemsPerLine int) ([][]string, error) {
 		parts := strings.FieldsFunc(s.Text(), func(r rune) bool { return r == '\t' })
 		if len(parts) != itemsPerLine {
 			return nil, fmt.Errorf("%s:%d: need %d parts per line, got %d", filename, n, itemsPerLine, len(parts))
+		}
+		for i := range parts {
+			parts[i] = strings.TrimSpace(parts[i])
 		}
 		lines = append(lines, parts)
 	}

@@ -17,9 +17,25 @@
 # Hello, fellow classmates.	tóngxuémen hǎo	同学们好
 # I am Lanlan.		wǒ shì Lánlán.	我是兰兰。
 
-:poss :n.1 is :prep :n.2	:poss :n.1 zài :n.2 :prep	XXX
-There is :n.1 :prep :n.2	:n.2 :prep yǒu :n.1 		XXX
+:poss :n1 is :prep :n2	:poss :n1 zài :n2 :prep	XXX
+There is :n1 :prep :n2	:n2 :prep yǒu :n1 		XXX
 :poss :n is :iprep  		:poss :n zài :iprep		XXX
+Excuse me, where is the :n ?	qǐngwèn, :n zài nǎr?		XXX
+There are :num :n :iprep .	:iprep yǒu :num jiān :n .	XXX
+The :n1 is :prep the :n2 .	:n1 zài :n2 :prep		XXX
+When is :poss birthday?		:poss shēngrì shì shénme shíhòu?	XXX
+:tm is :poss birthday.		:tm shì :poss shēngrì.		:tm 是 :poss 生日。
+Whose birthday was :tm ?	:tm shì shéide shēngrì?		:tm 是谁的生日？
+What day is :tm ?	:tm xīngqī jǐ?	:tm 星期几？
+next :dow is :poss birthday.	xiàge :dow shì :poss shēngrì.	下个 :dow 是 :poss  生日。
+9/29/2017	èr líng yī qī nián jiǔyuè èrshíjiǔrì	二0一七年九月二十九日
+What's today's date?	jīntiān jǐyuèjǐhào?	今天几月几号？
+Happy Birthday to You!		zhù nǐ shēngrì kuàilè!	祝你生日快乐！
+Which year were you born?	nǐ shì nǎnián shēngde?	你是哪年生的？
+go to sleep			shuìjiào		睡觉
+school's over			fàngxué			放学
+
+
 
 
 # Your cell phone is in front of the computer.	nǐde shǒujī zài diànnǎo qiánmiàn.	你的手机在电脑前面。
@@ -36,3 +52,13 @@ There is :n.1 :prep :n.2	:n.2 :prep yǒu :n.1 		XXX
 # I do my homework in my bedroom.	wǒ zài wǒde wòshì zuò gōngkè.	我在我的卧室做功课。
 # There are 2 bathrooms downstairs.	lóuxià yǒu liǎngjiān yùshì.	楼下有两间浴室。
 # Is your car in the garage?	nǐde chē zài chēkù ma?	你的车在车库吗？
+
+
+What are you doing?	nǐ zài zuò shénme?	你在做什么？
+What time is it？	xiànzài jǐdiǎn？	现在几点？
+good night		wǎnshàng hǎo		晚上好
+Did :pro eat :meal ?	:pro yǒuméiyǒu chī :meal ?	:pro 有没有吃 :meal ？
+When do you eat :meal ?	nǐmen shénme shíhòu chī :meal ?	你们什么时候吃 :meal ？
+
+What are :pro doing?	:pro zài zuò shénme?	:pro 在做什么？
+

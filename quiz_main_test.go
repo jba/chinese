@@ -14,8 +14,8 @@ func TestChooseWord(t *testing.T) {
 	}{
 		{"foo", "foo", "", ""},
 		{":zero", "???", "zero", "???"},
-		{":one", "oink", "one", "oink"},
-		{":one.2", "oink", "one.2", "oink"},
+		{":one", "oink", "one", "OINK"},
+		{":one2", "oink", "one2", "OINK"},
 	} {
 		bs := map[string]string{}
 		got := chooseWord(test.in, lexicon, bs)
