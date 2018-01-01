@@ -17,6 +17,7 @@ Happy Birthday to You!		zhù nǐ shēngrì kuàilè!	祝你生日快乐！
 Which year were you born?	nǐ shì nǎnián shēngde?	你是哪年生的？
 go to sleep			shuìjiào		睡觉
 school's over			fàngxué			放学
+Is :pn :n in the :room ?	:pn :n zài chēkù ma?	:pn :n 在 :room 吗?
 
 What time is it？	xiànzài jǐdiǎn？	现在几点？
 good night		wǎnshàng hǎo		晚上好
@@ -26,6 +27,19 @@ What are :pn doing?	:pn zài zuò shénme?	:pn 在做什么？
 Can :pn :v ?		:pn huìbúhuì :v ?	:pn 会不会 :v ？
 When do :pn :v ?	:pn jǐdiǎn :v ?	:pn 几点 :v ？
 Do :pn like to :v ?	:pn xǐbùxǐhuān :v ?	:pn 喜不喜欢 :v ？
+:pn :v at :time every morning.	:pn tiāntiān :tod :time :pv .	:pn 天天 :tod :time :v 。
+Do :pn know how to :v ?	:pn huìbúhuì :v ?	:pn 会不会 :v ？
+It's :time now!		xiànzài :time le!	现在 :time 了！
+Do we have school next :dow ?	wǒmen xià :dow shàng bú shàngxué?	我们下 :dow 上不上学？
+
+
+I didn't eat breakfast this morning.	wǒ jīntiān zǎoshàng méiyǒu chī zǎofàn.	我今天早上没有吃早饭。
+What are you reading?	Nǐ zài kàn shénme shū?	你在看什么书？
+I would like to have Chinese food tonight.	Wǒ jīntiānwǎnshàng xiǎng chī Zhōngguócài.	我今天晚上想吃中国菜。
+When did you go to bed last night?	Nǐ zuótiān wǎnshàng jǐdiǎn shuìjiào?	你昨天晚上几点睡觉？
+Did you do your Chinese homework?	Nǐ yǒuméiyǒu zuò Zhōngwén gōngkè?	你有没有做中文功课？
+Our family eats dinner very late.	wǒmen jiā hěn wǎn chī wǎnfàn.	我们家很晚吃晚饭。
+
 
 
 
@@ -42,7 +56,7 @@ Do :pn like to :v ?	:pn xǐbùxǐhuān :v ?	:pn 喜不喜欢 :v ？
 # The dining room is facing the kitchen.	fàntīng zài chúfáng duìmiàn.	饭厅在厨房对面。
 # I do my homework in my bedroom.	wǒ zài wǒde wòshì zuò gōngkè.	我在我的卧室做功课。
 # There are 2 bathrooms downstairs.	lóuxià yǒu liǎngjiān yùshì.	楼下有两间浴室。
-# Is your car in the garage?	nǐde chē zài chēkù ma?	你的车在车库吗？
+
 
 
 # look here		kàn zhèli	看这里
@@ -63,5 +77,6 @@ Do :pn like to :v ?	:pn xǐbùxǐhuān :v ?	:pn 喜不喜欢 :v ？
 # Goodbye, teacher	lǎoshī zàijiàn.	老师再见
 # Hello, fellow classmates.	tóngxuémen hǎo	同学们好
 # I am Lanlan.		wǒ shì Lánlán.	我是兰兰。
+
 
 

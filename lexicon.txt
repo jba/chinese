@@ -30,7 +30,7 @@ family room	jiātíngjiān	room	家庭间
 porch		yángtái		room	阳台
 
 book		shū		n	XXX
-car		chē		n	XXX
+car		chē		n	车
 cellphone	shǒujī		n	XXX
 computer	diànnǎo		n	XXX
 dog		gǒu		n	XXX
@@ -40,6 +40,7 @@ refrigerator	diànbīngxiāng	n	XXX
 sofa		shāfā		n	XXX
 teacher		lǎoshī		n	XXX
 TV		diànshì		n	XXX
+TV set		diànshìjī	n	电视机
 washing machine	xǐyījī		n	XXX
 school		xuéxiào		n	XXX
 book bag	shūbāo		n	XXX
@@ -83,7 +84,7 @@ birthday cake	shēngrì dàngāo	n		生日蛋糕
 birthday party	shēngrì huì	n		生日会
 
 Sunday		xīngqītiān	dow	星期天
-
+Friday		xīngqīwǔ	dow	星期五
 
 early morning	zǎoshàng	tod	早上
 noon		zhōngwǔ		tod	中午
@@ -91,14 +92,14 @@ afternoon	xiàwǔ		tod	下午
 morning		shàngwǔ		tod	上午
 this morning	jīntiān zǎoshàng	tod	今天早上
 last night	zuótiān wǎnshàng	tod	昨天晚上
-6 o'clock	liùdiǎn		tod	六点
-7:30 AM		zǎoshàng qīdiǎnbàn	tod	早上七点半
-8:15 PM		wǎnshàng bādiǎn shíwǔfēn	tod	晚上八点十五分
-9:04 AM		shàngwǔ jiǔdiǎn língsì fēn	tod	上午九点0四分
-12:40 PM	zhōngwǔ shíèrdiǎn sìshífēn	tod	中午十二点四十分
-2:58 PM		xiàwǔ liǎngdiǎn wǔshíbāfēn	tod	下午两点五十八分
-1:20AM		wǎnshàng yīdiǎn èrshífēn	tod	晚上一点二十分
-
+6 o'clock	liùdiǎn		time	六点
+7:30 AM		zǎoshàng qīdiǎnbàn	time	早上七点半
+8:15 PM		wǎnshàng bādiǎn shíwǔfēn	time	晚上八点十五分
+9:04 AM		shàngwǔ jiǔdiǎn língsì fēn	time	上午九点0四分
+12:40 PM	zhōngwǔ shíèrdiǎn sìshífēn	time	中午十二点四十分
+2:58 PM		xiàwǔ liǎngdiǎn wǔshíbāfēn	time	下午两点五十八分
+1:20AM		wǎnshàng yīdiǎn èrshífēn	time	晚上一点二十分
+2:30		liǎngdiǎnbàn	time	两点半
 breakfast	zǎofàn		meal	早饭
 lunch		wǔfàn		meal	午饭
 dinner		wǎnfàn		meal	晚饭
@@ -140,4 +141,3 @@ make phone calls	dǎ diànhuà	v	打电话
 # teeth		yá chǐ		n	XXX
 # heart		xīnzàng		n	XXX
 
-TV set		diànshìjī	n	电视机

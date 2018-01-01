@@ -44,15 +44,15 @@ func ParseItems(s string) ([]*Item, error) {
 	return items, nil
 }
 
-// Parse a lexicon from s. Each line of s should consist
+// ParseWords parses a list of words from s. Each line of s should consist
 // of four tab-separated values:
 // English Pinyin PartOfSpeech Characters
-func ParseLexicon(s string) (map[string][]*Word, error) {
+func ParseWords(s string) ([]*Word, error) {
 	lines, err := parseTSV(s, 4)
 	if err != nil {
 		return nil, err
 	}
-	lex := map[string][]*Word{}
+	var words []*Word
 	for _, line := range lines {
 		word := &Word{
 			English:      line[0],
@@ -60,13 +60,17 @@ func ParseLexicon(s string) (map[string][]*Word, error) {
 			PartOfSpeech: line[2],
 			Characters:   line[3],
 		}
-		lex[word.PartOfSpeech] = append(lex[word.PartOfSpeech], word)
+		words = append(words, word)
 	}
-	return lex, nil
+	return words, nil
 }
 
 // Construct a set of n question-answer pairs from the given items and lexicon.
-func BuildEntries(items []*Item, lexicon map[string][]*Word, n int) []*Entry {
+func BuildEntries(items []*Item, words []*Word, n int) []*Entry {
+	lexicon := map[string][]*Word{}
+	for _, w := range words {
+		lexicon[w.PartOfSpeech] = append(lexicon[w.PartOfSpeech], w)
+	}
 	perm := rand.Perm(len(items))
 	var result []*Entry
 	if len(items) < n {

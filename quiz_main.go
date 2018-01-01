@@ -32,13 +32,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	lexicon, err := readLexicon(*lexiconFile)
+	words, err := readWords(*lexiconFile)
 	if err != nil {
 		log.Fatal(err)
 	}
 	input = bufio.NewReader(os.Stdin)
 
-	qi := study.BuildEntries(items, lexicon, *nItems)
+	qi := study.BuildEntries(items, words, *nItems)
 	if *quiz {
 		runQuiz(qi)
 	} else {
@@ -121,10 +121,10 @@ func readDataFile(filename string) ([]*study.Item, error) {
 	return study.ParseItems(string(data))
 }
 
-func readLexicon(filename string) (map[string][]*study.Word, error) {
+func readWords(filename string) ([]*study.Word, error) {
 	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		return nil, err
 	}
-	return study.ParseLexicon(string(data))
+	return study.ParseWords(string(data))
 }
