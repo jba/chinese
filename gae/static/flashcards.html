@@ -7,7 +7,10 @@
     <div id="content">
     </div>
     <p/>
-    <button id="get-button" onclick='getEntries()'>Get Flashcards</button>
+    <select id="get-flashcards" autofocus=true size=10 oninput='getEntries(document.getElementById("get-flashcards").value)'>
+      <option value=all>All</option>
+      <option value=lesson3-written>Lesson 3 - Written</option>
+    </select>
     <br/>
   </body>
 </html>

@@ -27,7 +27,7 @@ What are :pn doing?	:pn zài zuò shénme?	:pn 在做什么？
 Can :pn :v ?		:pn huìbúhuì :v ?	:pn 会不会 :v ？
 When do :pn :v ?	:pn jǐdiǎn :v ?	:pn 几点 :v ？
 Do :pn like to :v ?	:pn xǐbùxǐhuān :v ?	:pn 喜不喜欢 :v ？
-:pn :v at :time every morning.	:pn tiāntiān :tod :time :pv .	:pn 天天 :tod :time :v 。
+:pn :v at :time every :tod .	:pn tiāntiān :tod :time :pv .	:pn 天天 :tod :time :v 。
 Do :pn know how to :v ?	:pn huìbúhuì :v ?	:pn 会不会 :v ？
 It's :time now!		xiànzài :time le!	现在 :time 了！
 Do we have school next :dow ?	wǒmen xià :dow shàng bú shàngxué?	我们下 :dow 上不上学？

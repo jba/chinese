@@ -120,6 +120,13 @@ watch TV	kàn diànshì	v	看电视
 watch movies	kàn diànyǐng	v	看电影
 make phone calls	dǎ diànhuà	v	打电话
 
+
+black	   hēisè	color	黑色
+red	   hóngsè	color	红色
+green	   lǜsède	color	绿色
+blue	   lánsè	color	蓝色
+
+
 # baseball	Bàngqiú		n	XXX
 # basketball	lánqiú		n	XXX
 # tennis		wǎngqiú		n	XXX

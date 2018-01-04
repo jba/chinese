@@ -1,6 +1,6 @@
-function getEntries() {
+function getEntries(corpus) {
   const xhr = new XMLHttpRequest();
-  const url = '/flashcards?n=10&corpus=all';
+  const url = '/flashcards?n=10&corpus=' + corpus;
   xhr.responseType = 'json';
   xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -9,7 +9,7 @@ function getEntries() {
   };
   xhr.open('GET', url);
   xhr.send();
-  document.getElementById("get-button").hidden = true;
+  document.getElementById("get-flashcards").hidden = true;
 }
 
 function runFlashcards(cards) {

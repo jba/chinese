@@ -76,20 +76,28 @@ func BuildEntries(items []*Item, words []*Word, n int) []*Entry {
 	if len(items) < n {
 		n = len(items)
 	}
-	for i := 0; i < n; i++ {
+	for i := 0; i < len(perm) && len(result) < n; i++ {
 		item := items[perm[i]]
-		result = append(result, entry(item, lexicon))
+		e, err := entry(item, lexicon)
+		if err != nil {
+			log.Printf("BuildEntries: %v", err)
+		} else {
+			result = append(result, e)
+		}
 	}
 	return result
 }
 
-func entry(item *Item, lexicon map[string][]*Word) *Entry {
+func entry(item *Item, lexicon map[string][]*Word) (*Entry, error) {
 	if !isTemplate(item.English) {
-		return &Entry{item.English, item.Pinyin}
+		return &Entry{item.English, item.Pinyin}, nil
 	}
 	q, bindings := instantiateTemplate(item.English, lexicon)
-	a := applyBindings(item.Pinyin, bindings)
-	return &Entry{q, a}
+	a, err := applyBindings(item.Pinyin, bindings)
+	if err != nil {
+		return nil, err
+	}
+	return &Entry{q, a}, nil
 }
 
 func isTemplate(s string) bool {
@@ -131,7 +139,7 @@ func chooseWord(w string, lexicon map[string][]*Word, bindings map[string]string
 	}
 }
 
-func applyBindings(s string, bindings map[string]string) string {
+func applyBindings(s string, bindings map[string]string) (string, error) {
 	words := strings.Fields(s)
 	var result []string
 	for _, w := range words {
@@ -139,14 +147,14 @@ func applyBindings(s string, bindings map[string]string) string {
 			result = append(result, w)
 		} else if b, ok := bindings[w[1:]]; ok {
 			if b == "" {
-				log.Fatalf("empty string for %s", w[1:])
+				return "", fmt.Errorf("empty string for %s", w[1:])
 			}
 			result = append(result, b)
 		} else {
-			log.Fatalf("applyBindings(%q): no binding for %q", s, w[1:])
+			return "", fmt.Errorf("applyBindings(%q): no binding for %q", s, w[1:])
 		}
 	}
-	return strings.Join(result, " ")
+	return strings.Join(result, " "), nil
 }
 
 // Parse a tab-separated value string.
