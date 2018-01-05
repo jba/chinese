@@ -10,7 +10,6 @@ import (
 	"math/rand"
 	"net/http"
 	"strconv"
-	"strings"
 	"time"
 
 	"github.com/jba/chinese/study"
@@ -207,19 +206,19 @@ func handleDeleteThing(w http.ResponseWriter, r *http.Request, corpus, key strin
 	ctx := appengine.NewContext(r)
 	err := datastore.Delete(ctx, datastore.NewKey(ctx, "Item", key, 0, corpusKey(ctx, corpus)))
 	if err != nil {
-		http.Error(w, "deleting item", http.StatusInternalServerError)
+		errorf(w, http.StatusInternalServerError, "deleting item: %v", err)
 		return
 	}
 	err = datastore.Delete(ctx, datastore.NewKey(ctx, "Word", key, 0, corpusKey(ctx, corpus)))
 	if err != nil {
-		http.Error(w, "deleting word", http.StatusInternalServerError)
+		errorf(w, http.StatusInternalServerError, "deleting word: %v", err)
 		return
 	}
 }
 
 func handleDeleteCorpus(w http.ResponseWriter, r *http.Request, corpus string) {
-	if !strings.HasPrefix(corpus, "test") {
-		http.Error(w, "corpus must begin with 'test'", http.StatusBadRequest)
+	if corpus == "" {
+		errorf(w, http.StatusBadRequest, "need corpus")
 		return
 	}
 	ctx := appengine.NewContext(r)
@@ -230,10 +229,16 @@ func handleDeleteCorpus(w http.ResponseWriter, r *http.Request, corpus string) {
 		return
 	}
 	if err := datastore.DeleteMulti(ctx, keys); err != nil {
-		http.Error(w, fmt.Sprintf("deleting: %v", err), http.StatusInternalServerError)
+		errorf(w, http.StatusInternalServerError, "deleting: %v", err)
 		return
 	}
 	fmt.Fprintf(w, "Deleted %d keys.\n", len(keys))
+}
+
+func errorf(w http.ResponseWriter, status int, format string, args ...interface{}) {
+	msg := fmt.Sprintf(format, args...)
+	http.Error(w, msg, status)
+	log.Print(msg)
 }
 
 ////////////////////////////////////////////////////////////////
